@@ -1,9 +1,8 @@
-import { Button } from "@material-ui/core";
-import { Typography } from "@material-ui/core";
 import Header from "./components/Header";
 import { Switch, Route } from "react-router-dom";
 import PageAbout from "./components/PageAbout";
 import PageHome from "./components/PageHome";
+import PageBlog from "./components/PageBlog";
 
 function App() {
   return (
@@ -21,6 +20,7 @@ function App() {
 
         <Route path="/blog">
           <Header active="blog" />
+          <PageBlog />
         </Route>
 
         <Route path="/contact">

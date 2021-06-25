@@ -76,15 +76,4 @@ const Header = (props) => {
   );
 };
 
-{
-  /* <nav className={classes.navStyles}>
-<ul className={classes.ulStyles}>
-<li className={classes.liStyles}>
-  <Link className={classes.linkStyles} to="/">
-    <Typography variant="button">home</Typography>
-  </Link>
-</li>
-</ul>
-</nav> */
-}
 export default Header;
