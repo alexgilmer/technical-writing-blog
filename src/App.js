@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import PageAbout from "./components/PageAbout";
 import PageHome from "./components/PageHome";
 import PageBlog from "./components/PageBlog";
+import PageContact from "./components/PageContact";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
 
         <Route path="/contact">
           <Header active="contact" />
+          <PageContact />
         </Route>
       </Switch>
     </>
