@@ -27,10 +27,6 @@ function App() {
           <Header active="contact" />
         </Route>
       </Switch>
-      <Button color="primary" variant="outlined">
-        This is a button
-      </Button>
-      <Typography>This is some text</Typography>
     </>
   );
 }

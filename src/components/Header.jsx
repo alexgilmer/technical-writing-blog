@@ -53,7 +53,7 @@ const Header = (props) => {
   return (
     <Container>
       <Typography gutterBottom align="center" color="primary" variant="h2">
-        The Possum's Blog
+        Alex Gilmer's Blog
       </Typography>
       <Grid container justify="center" spacing={2}>
         {navBarLinks.map((page) => (
