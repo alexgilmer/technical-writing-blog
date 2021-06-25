@@ -10,9 +10,16 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   imgCardStyles: {
     display: "flex",
+    flexFlow: "row",
     margin: "1rem 0",
     backgroundColor: theme.palette.secondary[500],
     color: "white",
+  },
+  imgStyles: {
+    width: "33%",
+  },
+  sideTextStyles: {
+    width: "66%",
   },
   textCardStyles: {
     margin: "1rem 0",
@@ -35,14 +42,13 @@ const PageAbout = (props) => {
 
       <Card className={classes.imgCardStyles}>
         <CardMedia
+          className={classes.imgStyles}
           component="img"
           alt="My face"
-          width="100px"
           image="My Face.jpg"
         />
-        {/* <img src="My Face.jpg" alt="My face!" /> */}
 
-        <CardContent>
+        <CardContent className={classes.sideTextStyles}>
           <Typography variant="body1" align="justify">
             Hey there! My name is <span className="underline">Alex Gilmer</span>
             . My friends call me "Possum" because when people ask me how I'm
@@ -82,7 +88,7 @@ const PageAbout = (props) => {
           <Typography variant="body1" align="justify">
             My first foray into the workforce happened shortly after high
             school. I hopped between several different jobs early on but
-            eventually came back to work at{" "}
+            eventually came to work at{" "}
             <a href="https://www.casinosofwinnipeg.com/club-regent-casino-home/">
               Club Regent Casino
             </a>
