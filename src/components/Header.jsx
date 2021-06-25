@@ -56,8 +56,8 @@ const Header = (props) => {
         Alex Gilmer's Blog
       </Typography>
       <Grid container justify="center" spacing={2}>
-        {navBarLinks.map((page) => (
-          <Grid item>
+        {navBarLinks.map((page, index) => (
+          <Grid item key={index}>
             <Link className={classes.linkStyles} to={`/${page.link}`}>
               <Paper
                 className={

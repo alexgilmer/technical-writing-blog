@@ -40,7 +40,7 @@ const PageHome = (props) => {
           <CardContent>
             <Typography align="center" variant="body1">
               Please choose from one of the navigation options at the{" "}
-              <a href="#">top</a>
+              <a href="/#">top</a>
             </Typography>
           </CardContent>
         </Card>

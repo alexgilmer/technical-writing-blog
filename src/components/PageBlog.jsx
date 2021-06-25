@@ -4,7 +4,6 @@ import {
   CardContent,
   CardActionArea,
   Typography,
-  Button,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 
@@ -44,8 +43,8 @@ const PageBlog = (props) => {
 
   return (
     <Container maxWidth="sm">
-      {blogListing.map((blog) => (
-        <Card className={classes.blogCardStyles}>
+      {blogListing.map((blog, index) => (
+        <Card className={classes.blogCardStyles} key={index}>
           <CardActionArea>
             <a className={classes.linkStyles} href={blog.href}>
               <CardContent>
