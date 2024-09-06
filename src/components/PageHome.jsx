@@ -22,9 +22,6 @@ const PageHome = (props) => {
   return (
     <>
       <Container maxWidth="sm">
-        <Typography className={classes.h2Styles} variant="h2">
-          #Splash_Page
-        </Typography>
         <Card className={classes.logoCardStyles}>
           <CardContent>
             <Typography align="center" variant="body1">

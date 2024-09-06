@@ -36,10 +36,6 @@ const PageAbout = (props) => {
 
   return (
     <Container maxWidth="sm">
-      <Typography className={classes.h2Styles} variant="h2">
-        #About_Me
-      </Typography>
-
       <Card className={classes.imgCardStyles}>
         <CardMedia
           className={classes.imgStyles}

@@ -4,6 +4,7 @@ import PageAbout from "./components/PageAbout";
 import PageHome from "./components/PageHome";
 import PageBlog from "./components/PageBlog";
 import PageContact from "./components/PageContact";
+import { Container, Typography } from "@material-ui/core";
 
 function App() {
   return (
@@ -29,6 +30,18 @@ function App() {
           <PageContact />
         </Route>
       </Switch>
+
+      <Container maxWidth="sm" style={{marginTop: "2em"}}>
+        <footer>
+          <Typography>
+            &copy; Alex Gilmer
+          </Typography>
+
+          <Typography>
+            <small>Page last updated: 2024-September-06</small>
+          </Typography>
+        </footer>
+      </Container>
     </>
   );
 }
