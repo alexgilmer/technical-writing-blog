@@ -31,14 +31,12 @@ function App() {
         </Route>
       </Switch>
 
-      <Container maxWidth="sm" style={{marginTop: "2em"}}>
+      <Container maxWidth="sm" style={{ marginTop: "2em" }}>
         <footer>
-          <Typography>
-            &copy; Alex Gilmer
-          </Typography>
+          <Typography>&copy; Alex Gilmer</Typography>
 
           <Typography>
-            <small>Page last updated: 2024-September-06</small>
+            <small>Page last updated: 2024-September-10</small>
           </Typography>
         </footer>
       </Container>
