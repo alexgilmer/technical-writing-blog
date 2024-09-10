@@ -1,28 +1,8 @@
 import React from "react";
-import {
-  Container,
-  Typography,
-  Card,
-  CardMedia,
-  CardContent,
-} from "@material-ui/core";
-import { makeStyles } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import BlogParagraph from "../../BlogParagraph";
 
-const useStyles = makeStyles((theme) => ({
-  textCardStyles: {
-    margin: "1rem 0",
-    backgroundColor: theme.palette.primary[500],
-    color: "white",
-  },
-  h2Styles: {
-    margin: "1rem auto",
-  },
-}));
-
 export default function GradJourney1() {
-  const classes = useStyles();
-
   return (
     <>
       <Typography variant="h4" align="center">
@@ -42,6 +22,7 @@ export default function GradJourney1() {
         hindsight. Our class was told to submit our resumes to{" "}
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://www.linkedin.com/in/coachjessicawatson/"
         >
           Jessica
@@ -55,11 +36,19 @@ export default function GradJourney1() {
 
       <BlogParagraph>
         I landed with my first choice,{" "}
-        <a target="_blank" href="https://www.bitspacedevelopment.com/">
+        <a
+          rel="noreferrer"
+          target="_blank"
+          href="https://www.bitspacedevelopment.com/"
+        >
           Bit Space Development
         </a>
         . Prior to the interview process, I had met the CEO{" "}
-        <a target="_blank" href="https://www.linkedin.com/in/cmdann/">
+        <a
+          rel="noreferrer"
+          target="_blank"
+          href="https://www.linkedin.com/in/cmdann/"
+        >
           Dan Blair
         </a>{" "}
         and got to talking about video games and VR technology. I was excited.
@@ -97,12 +86,17 @@ export default function GradJourney1() {
         &quot;VRSafety&quot; project. I was introduced to{" "}
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://www.linkedin.com/in/violet-laudinsky-209ba3195/"
         >
           Violet
         </a>
         , my senior dev, and{" "}
-        <a target="_blank" href="https://www.linkedin.com/in/jameel-de-beer/">
+        <a
+          rel="noreferrer"
+          target="_blank"
+          href="https://www.linkedin.com/in/jameel-de-beer/"
+        >
           Jameel
         </a>
         , the project manager. I remember coming home from my first in-office
@@ -119,16 +113,17 @@ export default function GradJourney1() {
         learning a brand new programming language for one of our projects?&quot;
         I was absolutely down. I’m nothing if not a fast study, eager to please,
         and I always love a good challenge. They gave me login credentials for
-        <a target="_blank" href="https://laracasts.com/">
+        <a rel="noreferrer" target="_blank" href="https://laracasts.com/">
           Laracasts
         </a>
         , got me into a premium{" "}
-        <a target="_blank" href="https://www.php.net/">
+        <a rel="noreferrer" target="_blank" href="https://www.php.net/">
           PHP
         </a>{" "}
         online course, and gave me a week to learn. My team also changed. I got
         to meet{" "}
         <a
+          rel="noreferrer"
           target="_blank"
           href="https://www.linkedin.com/in/riel-ree-dion-a3a55746/"
         >
@@ -136,6 +131,7 @@ export default function GradJourney1() {
         </a>
         , CEO of EventCamp.ca, and{" "}
         <a
+          rel="noreferrer"
           target="_blank"
           href="https://www.linkedin.com/in/jasreen-kaur-240349193/"
         >
