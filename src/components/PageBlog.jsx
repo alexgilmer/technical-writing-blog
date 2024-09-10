@@ -6,6 +6,9 @@ import {
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
+import { Switch, Route, Link } from "react-router-dom";
+
+import GradJourney1 from "./blogs/grad-journey-pt1/GradJourney1";
 
 const useStyles = makeStyles((theme) => ({
   blogCardStyles: {
@@ -18,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const blogListing = [
+const oldBlogListing = [
   {
     title: "Coding Deep Dive",
     href: "/blogPages/coding/CodingDeepDive.html",
@@ -43,18 +46,47 @@ const PageBlog = (props) => {
 
   return (
     <Container maxWidth="sm">
-      {blogListing.map((blog, index) => (
-        <Card className={classes.blogCardStyles} key={index}>
-          <CardActionArea>
-            <a className={classes.linkStyles} href={blog.href}>
-              <CardContent>
-                <Typography variant="h5">{blog.title}</Typography>
-                <Typography variant="body1">{blog.description}</Typography>
-              </CardContent>
-            </a>
-          </CardActionArea>
-        </Card>
-      ))}
+      <Switch>
+        <Route exact path="/blog">
+          <Card className={classes.blogCardStyles}>
+            <CardActionArea>
+              <Link className={classes.linkStyles} to="/blog/gradjourney1">
+                <CardContent>
+                  <Typography variant="h5">Grad Journey Part 1</Typography>
+                  <Typography variant="body1">
+                    Internship and my First Dev Job with Bit Space Development
+                  </Typography>
+                </CardContent>
+              </Link>
+            </CardActionArea>
+          </Card>
+
+          {oldBlogListing.map((blog, index) => (
+            <Card className={classes.blogCardStyles} key={index}>
+              <CardActionArea>
+                <a className={classes.linkStyles} href={blog.href}>
+                  <CardContent>
+                    <Typography variant="h5">{blog.title}</Typography>
+                    <Typography variant="body1">{blog.description}</Typography>
+                  </CardContent>
+                </a>
+              </CardActionArea>
+            </Card>
+          ))}
+        </Route>
+
+        <Route path="/blog/gradjourney1">
+          <Link to="/blog">
+            <Typography>Back to Blog listing</Typography>
+          </Link>
+
+          <GradJourney1 />
+
+          <Link to="/blog">
+            <Typography>Back to Blog listing</Typography>
+          </Link>
+        </Route>
+      </Switch>
     </Container>
   );
 };
