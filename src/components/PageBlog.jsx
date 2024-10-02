@@ -9,6 +9,7 @@ import { makeStyles } from "@material-ui/core";
 import { Switch, Route, Link } from "react-router-dom";
 
 import GradJourney1 from "./blogs/grad-journey-pt1/GradJourney1";
+import GradJourney2 from "./blogs/grad-journey-pt2/GradJourney2";
 
 const useStyles = makeStyles((theme) => ({
   blogCardStyles: {
@@ -50,11 +51,28 @@ const PageBlog = (props) => {
         <Route exact path="/blog">
           <Card className={classes.blogCardStyles}>
             <CardActionArea>
+              <Link className={classes.linkStyles} to="/blog/gradjourney2">
+                <CardContent>
+                  <Typography variant="h5">Grad Journey Part 2</Typography>
+                  <Typography variant="body1">First Year at MITT</Typography>
+                  <Typography>
+                    <small>2024-October-02</small>
+                  </Typography>
+                </CardContent>
+              </Link>
+            </CardActionArea>
+          </Card>
+
+          <Card className={classes.blogCardStyles}>
+            <CardActionArea>
               <Link className={classes.linkStyles} to="/blog/gradjourney1">
                 <CardContent>
                   <Typography variant="h5">Grad Journey Part 1</Typography>
                   <Typography variant="body1">
                     Internship and my First Dev Job with Bit Space Development
+                  </Typography>
+                  <Typography>
+                    <small>2024-September-10</small>
                   </Typography>
                 </CardContent>
               </Link>
@@ -81,6 +99,18 @@ const PageBlog = (props) => {
           </Link>
 
           <GradJourney1 />
+
+          <Link to="/blog">
+            <Typography>Back to Blog listing</Typography>
+          </Link>
+        </Route>
+
+        <Route path="/blog/gradjourney2">
+          <Link to="/blog">
+            <Typography>Back to Blog listing</Typography>
+          </Link>
+
+          <GradJourney2 />
 
           <Link to="/blog">
             <Typography>Back to Blog listing</Typography>

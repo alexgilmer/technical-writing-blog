@@ -36,7 +36,7 @@ function App() {
           <Typography>&copy; Alex Gilmer</Typography>
 
           <Typography>
-            <small>Page last updated: 2024-September-10</small>
+            <small>Page last updated: 2024-October-02</small>
           </Typography>
         </footer>
       </Container>
