@@ -13,7 +13,11 @@ export default function GradJourney2() {
         Things have been going pretty hunky-dory at BSD. I enjoyed working on
         EventCamp, and spending a bit of time also assisting other BSD projects.
         In July, after about 8 months of steady work with BSD, I got a call from{" "}
-        <a target="_blank" href="https://www.linkedin.com/in/chrismacdonald3/">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/chrismacdonald3/"
+        >
           Chris MacDonald
         </a>
         , my former MITT instructor: &quot;Hey Alex, the SD program at MITT is
@@ -40,20 +44,33 @@ export default function GradJourney2() {
 
       <BlogParagraph>
         I quickly settled in at MITT.{" "}
-        <a target="_blank" href="https://www.linkedin.com/in/jaredjhenns/">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/jaredjhenns/"
+        >
           Jared Enns
         </a>{" "}
         and{" "}
-        <a target="_blank" href="https://www.linkedin.com/in/tabdelaziz/">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/tabdelaziz/"
+        >
           Tarek Abdel Aziz
         </a>{" "}
         were available as administrative backup when needed,{" "}
-        <a target="_blank" href="https://www.linkedin.com/in/mrspecht/">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/mrspecht/"
+        >
           Andre Specht
         </a>{" "}
         and{" "}
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://www.linkedin.com/in/zacharie-montreuil-308689189/"
         >
           Zach Montreuil
@@ -80,6 +97,7 @@ export default function GradJourney2() {
         this course. He was a very smart man but also, unfortunately, a large{" "}
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://www.google.ca/search?q=knowledge+silo+meaning"
         >
           knowledge silo
