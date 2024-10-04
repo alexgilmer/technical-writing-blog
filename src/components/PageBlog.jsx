@@ -22,6 +22,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const newBlogListing = [
+  {
+    title: "Grad Journey Part 2",
+    subtitle: "First Year at MITT",
+    date: "2024-October-02",
+    link: "/blog/gradjourney2",
+    element: <GradJourney2 />,
+  },
+  {
+    title: "Grad Journey Part 1",
+    subtitle: "Internship and my First Dev Job with Bit Space Development",
+    date: "2024-September-10",
+    link: "/blog/gradjourney1",
+    element: <GradJourney1 />,
+  },
+];
+
 const oldBlogListing = [
   {
     title: "Coding Deep Dive",
@@ -49,43 +66,31 @@ const PageBlog = (props) => {
     <Container maxWidth="sm">
       <Switch>
         <Route exact path="/blog">
-          <Card className={classes.blogCardStyles}>
-            <CardActionArea>
-              <Link className={classes.linkStyles} to="/blog/gradjourney2">
-                <CardContent>
-                  <Typography variant="h5">Grad Journey Part 2</Typography>
-                  <Typography variant="body1">First Year at MITT</Typography>
-                  <Typography>
-                    <small>2024-October-02</small>
-                  </Typography>
-                </CardContent>
-              </Link>
-            </CardActionArea>
-          </Card>
-
-          <Card className={classes.blogCardStyles}>
-            <CardActionArea>
-              <Link className={classes.linkStyles} to="/blog/gradjourney1">
-                <CardContent>
-                  <Typography variant="h5">Grad Journey Part 1</Typography>
-                  <Typography variant="body1">
-                    Internship and my First Dev Job with Bit Space Development
-                  </Typography>
-                  <Typography>
-                    <small>2024-September-10</small>
-                  </Typography>
-                </CardContent>
-              </Link>
-            </CardActionArea>
-          </Card>
-
-          {oldBlogListing.map((blog, index) => (
+          {newBlogListing.map((blog, index) => (
             <Card className={classes.blogCardStyles} key={index}>
               <CardActionArea>
-                <a className={classes.linkStyles} href={blog.href}>
+                <Link className={classes.linkStyles} to={blog.link}>
                   <CardContent>
                     <Typography variant="h5">{blog.title}</Typography>
-                    <Typography variant="body1">{blog.description}</Typography>
+                    <Typography variant="body1">{blog.subtitle}</Typography>
+                    <Typography>
+                      <small>{blog.date}</small>
+                    </Typography>
+                  </CardContent>
+                </Link>
+              </CardActionArea>
+            </Card>
+          ))}
+
+          {oldBlogListing.map((oldBlog, index) => (
+            <Card className={classes.blogCardStyles} key={index}>
+              <CardActionArea>
+                <a className={classes.linkStyles} href={oldBlog.href}>
+                  <CardContent>
+                    <Typography variant="h5">{oldBlog.title}</Typography>
+                    <Typography variant="body1">
+                      {oldBlog.description}
+                    </Typography>
                   </CardContent>
                 </a>
               </CardActionArea>
@@ -93,29 +98,19 @@ const PageBlog = (props) => {
           ))}
         </Route>
 
-        <Route path="/blog/gradjourney1">
-          <Link to="/blog">
-            <Typography>Back to Blog listing</Typography>
-          </Link>
+        {newBlogListing.map((blog, index) => (
+          <Route path={blog.link}>
+            <Link to="/blog">
+              <Typography>Back to Blog listing</Typography>
+            </Link>
 
-          <GradJourney1 />
+            {blog.element}
 
-          <Link to="/blog">
-            <Typography>Back to Blog listing</Typography>
-          </Link>
-        </Route>
-
-        <Route path="/blog/gradjourney2">
-          <Link to="/blog">
-            <Typography>Back to Blog listing</Typography>
-          </Link>
-
-          <GradJourney2 />
-
-          <Link to="/blog">
-            <Typography>Back to Blog listing</Typography>
-          </Link>
-        </Route>
+            <Link to="/blog">
+              <Typography>Back to Blog listing</Typography>
+            </Link>
+          </Route>
+        ))}
       </Switch>
     </Container>
   );
