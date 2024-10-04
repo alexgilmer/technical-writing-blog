@@ -5,8 +5,29 @@ import PageHome from "./components/PageHome";
 import PageBlog from "./components/PageBlog";
 import PageContact from "./components/PageContact";
 import { Container, Typography } from "@material-ui/core";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [lastUpdated, setLastUpdated] = useState(new Date(0));
+  const [lastMessage, setLastMessage] = useState("");
+
+  useEffect(() => {
+    fetch(
+      "https://api.github.com/repos/alexgilmer/technical-writing-blog/commits"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        const { commit } = data[0];
+
+        const date = commit.author.date;
+        setLastUpdated(new Date(date));
+
+        const message = commit.message;
+        setLastMessage(message);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <>
       <Switch>
@@ -36,7 +57,10 @@ function App() {
           <Typography>&copy; Alex Gilmer</Typography>
 
           <Typography>
-            <small>Page last updated: 2024-October-02</small>
+            <small>
+              Page last updated: {lastUpdated.toLocaleDateString()}, "
+              {lastMessage}"
+            </small>
           </Typography>
         </footer>
       </Container>
